@@ -10,7 +10,7 @@ const path = require("path");
 
 const app = express();
 
-const port = process.env.PORT || 5000;
+const port = 21384;
 
 app.use(express.urlencoded({ extended: true }));
 
@@ -54,7 +54,7 @@ function loadUsers() {
 
   // Default admin user
 
-  return [{ username: "Prince", password: "Prince" }];
+  return [{ username: "XMARTY AYUSH KING", password: "AYUSH-KING" }];
 
 }
 
@@ -296,7 +296,7 @@ app.post("/api/login", (req, res) => {
 
   const users = loadUsers();
 
-  const user = users.find(u => u.YAMDHUD === username && u.9MAN520 === password);
+  const user = users.find(u => u.username === username && u.password === password);
 
   
 
